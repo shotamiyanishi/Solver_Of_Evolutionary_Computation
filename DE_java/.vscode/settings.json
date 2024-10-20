@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.jdk.ls.java.home": "C:\\Users\\szbz4\\Desktop\\jdk-19.0.2",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}
