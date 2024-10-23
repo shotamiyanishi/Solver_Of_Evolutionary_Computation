@@ -172,10 +172,10 @@ class cmaes:
         #平均ベクトルmの更新
         self.m = self.m + self.Eta_m * self.sigma * self.dy
 
-        # 共分散行列の更新
+        # 共分散行列Cの更新
         matrix = np.zeros((self.dim, self.dim))
         for i in range(self.mu):
-            tmp = self.population[i].get_x() - self.m
+            tmp = self.population[i].get_y()
             tmp = tmp.reshape(self.dim, 1)
             matrix += self.w[i] * (np.dot(tmp, tmp.T))
                 
@@ -215,7 +215,7 @@ dim = 30 #次元数(決定変数の数)
 pop_size = 4  + int(math.ceil(3 * np.log(dim))) #集団サイズ：推奨値は4 + int(math.ceil(3 * np.log(dim)))
 m = 3.0 #探索開始時の平均ベクトル 例：m = 3.0のとき，m = [3.0, 3.0, ...,3.0]^{dim}から探索を開始
 sigma = 5.0 #探索開始時の標準偏差
-seed = 0 #乱数シード(結果の再現性のため)
+seed = 1 #乱数シード(結果の再現性のため)
 
 func = RozenBlock #解きたいタスク
 
