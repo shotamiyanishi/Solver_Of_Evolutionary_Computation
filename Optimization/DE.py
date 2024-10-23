@@ -1,7 +1,8 @@
 import numpy as np
 import copy
 from benchmarks import Sphere, Rastrigin, RozenBlock
-    
+
+#差分進化法のアルゴリズム
 class solution:
     def __init__(self, dim):
         self.vector = np.zeros(dim)

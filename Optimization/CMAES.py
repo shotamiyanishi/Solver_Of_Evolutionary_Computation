@@ -3,6 +3,7 @@ import math
 
 from benchmarks import Sphere, Rastrigin, RozenBlock
 
+#集団内の個体に評価値を与える．
 def evaluate(func, poplation):
     pop_size = len(poplation)
     for i in range(pop_size):
